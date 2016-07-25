@@ -8,7 +8,7 @@ echo "Uploadnig padded SPL to device memory"
 sudo sunxi-fel write 0x43000000 sunxi-spl-with-ecc.bin
 
 echo "Uploading padded Uboot to device memory"
-sudo sunxi-fel write 0x4a000000 u-boot-dtb.bin
+sudo sunxi-fel write 0x4a000000 padded_uboot
 
 echo "Uploading Uboot flashing script image to device memory"
 sudo sunxi-fel write 0x43100000 uboot-script.img
