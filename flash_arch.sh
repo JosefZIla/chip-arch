@@ -18,8 +18,9 @@ sudo sunxi-fel exe 0x4a000000
 
 timeout=30
 while let "timeout > 0"; do
-  test -z $(fastboot -i 0x1f3a devices) && break
+  test -n "$(fastboot -i 0x1f3a devices)" && break
   let timeout--
+  sleep 1
 done
 let timeout==0 &&{
   echo "cannot find device in fastboot mode"
