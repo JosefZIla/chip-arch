@@ -29,5 +29,5 @@ let timeout==0 &&{
 echo "Flashing UBI image using fastboot"
 sudo fastboot -i 0x1f3a -u flash UBI ubi.img.sparse
 
-echo "Falshing done, hopefully now the device will boot correctly to Arch"
+echo "Flashing done, hopefully now the device will boot correctly to Arch"
 sudo fastboot -i 0x1f3a continue
