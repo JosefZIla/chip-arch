@@ -16,7 +16,7 @@ sudo sunxi-fel write 0x43100000 uboot-script.img
 echo "Running Uboot with flashing script on device and  waiting for fastboot"
 sudo sunxi-fel exe 0x4a000000
 
-timeout=30
+timeout=60
 while let "timeout > 0"; do
   test -n "$(fastboot -i 0x1f3a devices)" && break
   let timeout--
