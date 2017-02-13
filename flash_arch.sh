@@ -18,7 +18,7 @@ sudo sunxi-fel exe 0x4a000000
 
 timeout=60
 while let "timeout > 0"; do
-  test -n "$(fastboot -i 0x1f3a devices)" && break
+  test -n "$(sudo fastboot -i 0x1f3a devices)" && break
   let timeout--
   sleep 1
 done
